@@ -1,0 +1,11 @@
+@media (min-width:768px) {
+    .animated-intro {
+        height="200"
+    }
+
+    .promo{
+        display: none;
+        visibility: hidden;
+        clear: both;
+    }
+}

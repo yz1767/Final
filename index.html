@@ -1,0 +1,248 @@
+<!doctype html>
+<html background=black;>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <!-- our custom style, generated from scss -->
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="style/screen.css">
+    <link rel="stylesheet" href="css/promo.css">
+    <link rel="stylesheet" href="css/tile.css">
+    <link rel="stylesheet" href="css/story.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script src="js/tile.js"></script>
+</head>
+
+<body>
+    <style>
+
+    </style>
+    <!-- code here -->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="javascripts/bootstrap.js"></script>
+    <!--   nav bar -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Puzzle!</a>
+        </div>
+        <div class="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li class="dropdown-toggle" data-toggle="dropdown"><a href="#">Puzzle Game 
+                <!-- <span class="caret"></span>  --> 
+                </a></li>
+                <!-- <ul class="dropdown-menu">
+                    <li><a href="#">Crossword</a></li>
+                    <li><a href="#">Word-search</a></li>
+                    <li><a href="#">Number</a></li>
+                    <li><a href="#">Maze</a></li>
+                </ul> -->
+                <li class="dropdown-toggle" data-toggle="dropdown"><a href="#">Design Your Own Puzzle</a></li>
+                <li class="dropdown-toggle" data-toggle="dropdown"><a href="#story">Story of Puzzle 
+                <!-- <span class="caret"></span> -->
+                 </a></li>
+                <!-- <ul class="dropdown-menu">
+                    <li><a href="#">Chess</a></li>
+                    <li><a href="#">Jigsaw</a></li>
+                    <li><a href="#">Logic</a></li>
+                    <li><a href="#">Number</a></li>
+                </ul> -->
+            </ul>
+        </div>
+    </nav>
+    <!--  nav bar end -->
+    <!--   puzzle-promo -->
+    <div class="promo">
+        <div class="promo-text">
+            <h1>Puzzle! A Website For All Kinds Of Puzzle Games</h1>
+            <script>
+            $('h1').each(function() {
+                var a = $(this).text().split(' ').join('');
+                $(this).html('');
+
+                for (var i = 0; i < a.length; i += 1) {
+                    $(this).append($('<span>').text(a[i] + ' '));
+                }
+            })
+
+            var elems = $('span');
+            for (var i = 0; i < elems.length; i += 1) {
+                elems[i].style.cssText = 'top: ' + Math.random() * 100 + 'px'
+            }
+
+            setTimeout(function() {
+                $('span').css('top', 0);
+            }, 100)
+            </script>
+            <div id="promo-button">
+                <a href="#black1"><span>Start!</span></a>
+            </div>
+        </div>
+        <div class="promo-background">
+            <div class="promo-backgrond-left">
+                <iframe src="puzzle-grid-gallery/puzzle.html" position: relative; width=129%; height=500px; frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                </iframe>
+            </div>
+            <div class="promo-backgrond-middle">
+                <iframe src="puzzle-grid-gallery/puzzle.html" position: relative; width=129%; height=500px; frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                </iframe>
+            </div>
+            <div class="promo-backgrond-right">
+                <iframe src="puzzle-grid-gallery/puzzle.html" position: relative; width=129%; height=500px; frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                </iframe>
+            </div>
+        </div>
+    </div>
+    <div id="promo-img">
+        <img src="img/black.png">
+    </div>
+    <!--   puzzle-promo-end  -->
+    <img width="100%" src="img/black1.png" id="black1">
+    <div id="puzzle-game">
+        
+        <h1> Puzzle Game</h1>
+         <style>
+        .puzzle-game-seemore{
+            position: relative;
+            float:right;
+        }
+        
+
+        .fa-arrow-circle-o-right {
+            color: black;
+        }
+        </style>
+        <!-- <a class="puzzle-game-seemore"href="#"><h4>See More &nbsp;<i class="fa fa-arrow-circle-o-right fa-1x" aria-hidden="true"></i></h4></a> -->
+        
+        <div id="promo-img">
+            <img src="img/black3.png">
+        </div>
+        <div class="grid-container">
+            <div class="grid-item large floatLeft">
+                <img src="img/PuzzleGameShow3.png" />
+                <div class="info hide-info">
+                    <h1>Chess Puzzle </h1>
+                    <div class="date">May 1 2016</div>
+                    <div class="description">Chess is a two-player strategy board game played on a chessboard, a checkered gameboard with 64 squares arranged in an eight-by-eight grid. Checkmate your virtual opponent in the requested number of moves.</div>
+                    <button><a href="https://gameknot.com/chess-puzzles.pl">Read More</a></button>
+                </div>
+            </div>
+            <div class="grid-item wide floatLeft">
+                <img src="img/PuzzleGameShow2.png" />
+                <div class="info hide-info">
+                    <h1>Minesweeper</h1>
+                    <div class="date">May 1 2016</div>
+                    <div class="description">Minesweeper is a single-player game to clear a rectangular board containing hidden "mines" without detonating any of them, with help from clues about the number of neighboring mines in each field. </div>
+                    <button><a href="http://minesweeperonline.com">Read More</a></button>
+                </div>
+            </div>
+            <div class="grid-item medium floatLeft">
+                <img src="img/PuzzleGameShow1.png" />
+                <div class="info hide-info">
+                    <h1>Jigsaw Puzzle</h1>
+                    <div class="date">May 1 2016</div>
+                    <div class="description">Drag the puzzle piece to the proper place. Finish in 1 minute.</div>
+                    <button><a href="https://gameknot.com/chess-puzzles.pl">Read More</a></button>
+                </div>
+            </div>
+            <div class="grid-item medium floatLeft">
+                <img src="img/PuzzleGameShow4.png" />
+                <div class="info hide-info">
+                    <h1>Sudoku</h1>
+                    <div class="date">May 1 2016</div>
+                    <div class="description">Enter numbers into the blank spaces so that each row, column and 3x3 box contains the numbers 1 to 9</div>
+                    <button><a href="http://www.puzzle-sudoku.com">Read More </a> </button>
+                </div>
+            </div>
+            <div class="grid-item medium floatLeft">
+                <img src="img/PuzzleGameShow5.png" />
+                <div class="info hide-info">
+                    <h1>Slither Link</h1>
+                    <div class="date">May 1 2016</div>
+                    <div class="description"> Draw lines between the dots to form a single loop without crossings or branches.</div>
+                    <button><a href="http://www.puzzle-loop.com">Read More</a></button>
+                </div>
+            </div>
+            <div class="grid-item medium floatLeft">
+                <img src="img/PuzzleGameShow6.png" />
+                <div class="info hide-info">
+                    <h1>Tangram</h1>
+                    <div class="date">May 1 2016</div>
+                    <div class="description">The tangram is a dissection puzzle consisting of seven flat shapes, and put them together to form shapes.</div>
+                    <button><a href="http://www.abcya.com/tangrams.htm">Read More</a></button>
+                </div>
+            </div>
+        </div>
+        <h1> Puzzle Story</h1>
+        <div id="story">
+            <script>
+            console.clear();
+            $(function() {
+                var $g = $(".gallery, .gallery--item");
+                var $gi = $(".gallery--item");
+                //*
+                $g.hover(function(evt) {
+                    $(this).addClass("hover");
+                }, function(evt) {
+                    $(this).removeClass("hover");
+                });
+                //*/
+                //*
+                $gi.click(function(evt) {
+                    $(".hover").removeClass("hover");
+                    $(".gallery").addClass("hover");
+                    $(this).addClass("hover");
+                });
+                //*/
+            });
+            </script>
+            <ul class="gallery">
+                <li class="gallery--item">
+                    <img src="img/Story1.png" />
+                    <h3>Minesweeper </h3>
+                </li>
+                <li class="gallery--item">
+                    <img src="img/Story2.gif" />
+                    <h3>Tetris</h3>
+                </li>
+                <li class="gallery--item">
+                    <img src="img/Story3.png" />
+                    <h3>Spider Solitaire</h3>
+                </li>
+                <li class="gallery--item">
+                    <img src="img/Story4.jpg" />
+                    <h3>Lemmings</h3>
+                </li>
+                <li class="gallery--item">
+                    <img src="img/Story5.png" />
+                    <h3>Sudoku</h3>
+                </li>
+                <li class="gallery--item">
+                    <img src="img/Story6.jpg" />
+                    <h3>Slitherlink</h3>
+                </li>
+                <li class="gallery--item">
+                    <img src="img/Story7.jpg" />
+                    <h3>Jigsaw puzzle</h3>
+                </li>
+                <li class="gallery--item">
+                    <img src="img/Story8.png" />
+                    <h3>Crossword</h3>
+                </li>
+                <li class="gallery--item">
+                    <img src="img/Story9.png" />
+                    <h3>Tangram</h3>
+                </li>
+                <li class="gallery--item">
+                    <img src="img/Story10.jpg" />
+                    <h3>Zuma</h3>
+                </li>
+            </ul>
+            <script src="js/story.js"></script>
+        </div>
+</body>
+
+</html>
